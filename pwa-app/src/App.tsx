@@ -1,8 +1,11 @@
 import './App.css'
 
 function App() {
+
   return (
-    <>A simple PWA for experiementing Push API</>
+    <>
+      <h1>A simple PWA using Push API</h1>
+    </>
   )
 }
 
