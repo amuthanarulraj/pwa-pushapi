@@ -7,7 +7,7 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 export default defineConfig({
   server: {
     port: 3000,
-    https: true,
+    https: false,
   },
   plugins: [
     react(),
@@ -22,7 +22,8 @@ export default defineConfig({
       srcDir: 'src',
       filename: 'sw.ts',
       devOptions: {
-        enabled: true
+        enabled: true,
+        type: 'module'
       },
       manifest: {
         id: "pwa-demo-app",
