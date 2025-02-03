@@ -7,7 +7,7 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 export default defineConfig({
   server: {
     port: 3000,
-    https: false,
+    https: true,
   },
   plugins: [
     react(),
@@ -18,11 +18,14 @@ export default defineConfig({
     }),
     VitePWA({
       registerType: 'autoUpdate',
-      strategies: 'generateSW',
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'sw.ts',
       devOptions: {
         enabled: true
       },
       manifest: {
+        id: "pwa-demo-app",
         short_name: "PWA",
         name: "PWA Demo",
         icons: [
@@ -59,6 +62,9 @@ export default defineConfig({
             url: "/%s"
           }
         ]
+      },
+      workbox: {
+
       }
     })]
 })
