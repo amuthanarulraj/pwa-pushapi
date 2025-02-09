@@ -1,5 +1,5 @@
 # pwa-pushapi
-A sample implementation for Push API with HTTPs.
+A sample implementation to demo [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) with HTTPS.
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ A sample implementation for Push API with HTTPs.
     [alt_names]
     DNS.1 = localhost
     ```
-2. Run `cd certs` and generate certificate using below command.
+2. Run `cd certs` and generate certificate using below command. Please OS specific tools to generate self signed certificates.
     ```
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
         -keyout localhost.key -out localhost.crt \
