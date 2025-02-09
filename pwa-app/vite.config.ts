@@ -7,15 +7,13 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 export default defineConfig({
   server: {
     port: 3000,
-    https: false,
+    https: {
+      key: './../certs/localhost.key',
+      cert: './../certs/localhost.crt',
+    }
   },
   plugins: [
     react(),
-    basicSsl({
-      name: 'development',
-      domains: ['*.custom.com'],
-      certDir: './dist/certs',
-    }),
     VitePWA({
       registerType: 'autoUpdate',
       strategies: 'injectManifest',

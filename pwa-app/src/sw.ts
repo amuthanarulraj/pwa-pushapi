@@ -126,12 +126,6 @@ setCatchHandler(async ({ event }) => {
 self.skipWaiting()
 clientsClaim()
 
-self.addEventListener('push', function (event) {
-    // Keep the service worker alive until the notification is created.
-    event.waitUntil((async () => {
-        self.clients.get('pwa-demo-app').then(async (client) => {
-            if(!client) return;
-            await self.clients.openWindow(client.url);
-        });
-    })())
+self.addEventListener('push', function () {
+    console.log('Push event received');
 });
