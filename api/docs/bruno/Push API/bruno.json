@@ -5,5 +5,16 @@
   "ignore": [
     "node_modules",
     ".git"
-  ]
+  ],
+  "clientCertificates": {
+    "enabled": true,
+    "certs": [
+      {
+        "domain": "https://localhost",
+        "certFilePath": "/Users/amuthanarulraj/Workspace/git/pwa-pushapi/certs/localhost.crt",
+        "keyFilePath": "/Users/amuthanarulraj/Workspace/git/pwa-pushapi/certs/localhost.key",
+        "passphrase": ""
+      }
+    ]
+  }
 }
